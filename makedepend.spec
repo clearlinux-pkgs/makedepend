@@ -4,7 +4,7 @@
 #
 Name     : makedepend
 Version  : 1.0.5
-Release  : 7
+Release  : 8
 URL      : http://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.5.tar.gz
 Source0  : http://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.5.tar.gz
 Summary  : No detailed summary available
