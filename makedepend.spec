@@ -4,12 +4,12 @@
 #
 Name     : makedepend
 Version  : 1.0.5
-Release  : 8
+Release  : 9
 URL      : http://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.5.tar.gz
 Source0  : http://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.5.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : MIT
+License  : MIT-Opengroup
 Requires: makedepend-bin
 Requires: makedepend-doc
 BuildRequires : pkgconfig(xorg-macros)
@@ -40,13 +40,23 @@ doc components for the makedepend package.
 %setup -q -n makedepend-1.0.5
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
+export LANG=C
+export SOURCE_DATE_EPOCH=1523287504
 %configure --disable-static
-make V=1 %{?_smp_mflags}
+make  %{?_smp_mflags}
 
 %check
+export LANG=C
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
+export SOURCE_DATE_EPOCH=1523287504
 rm -rf %{buildroot}
 %make_install
 
