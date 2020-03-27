@@ -6,7 +6,7 @@
 #
 Name     : makedepend
 Version  : 1.0.6
-Release  : 12
+Release  : 13
 URL      : http://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.6.tar.gz
 Source0  : http://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.6.tar.gz
 Source99 : http://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.6.tar.gz.sig
